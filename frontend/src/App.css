@@ -1,0 +1,267 @@
+:root {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1a1a2e;
+  background: #f0f2f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 1.75rem;
+  color: #16213e;
+  margin-bottom: 0.35rem;
+}
+
+.app-header p {
+  color: #5a6270;
+  font-size: 0.95rem;
+}
+
+.nav-abas {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  padding: 0.35rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.nav-abas button {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #5a6270;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-abas button:hover {
+  background: #eef1f6;
+}
+
+.nav-abas button.ativa {
+  background: #2563eb;
+  color: #fff;
+}
+
+.pagina {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+}
+
+.pagina-header {
+  margin-bottom: 1.25rem;
+}
+
+.pagina-header h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.pagina-header p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 120px auto;
+  gap: 0.75rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.formulario-largo {
+  grid-template-columns: 1fr 120px 1fr 140px auto;
+}
+
+@media (max-width: 768px) {
+  .formulario,
+  .formulario-largo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.campo label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.3rem;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+button[type='submit'],
+.btn-secundario {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button[type='submit'] {
+  background: #2563eb;
+  color: #fff;
+}
+
+button[type='submit']:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+button[type='submit']:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-secundario {
+  background: #e5e7eb;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.btn-secundario:hover {
+  background: #d1d5db;
+}
+
+.btn-perigo {
+  padding: 0.35rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-perigo:hover {
+  background: #fecaca;
+}
+
+.mensagem-erro {
+  color: #b91c1c;
+  background: #fef2f2;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.aviso {
+  color: #92400e;
+  background: #fffbeb;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.tabela-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+td.vazio {
+  text-align: center;
+  color: #9ca3af;
+  padding: 1.5rem;
+}
+
+tfoot .total-geral {
+  background: #f3f4f6;
+}
+
+tfoot td {
+  border-top: 2px solid #d1d5db;
+}
+
+.positivo {
+  color: #15803d;
+}
+
+.negativo {
+  color: #b91c1c;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.badge.receita {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge.despesa {
+  background: #fee2e2;
+  color: #b91c1c;
+}

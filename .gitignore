@@ -1,0 +1,23 @@
+# Build
+backend/bin/
+backend/obj/
+frontend/dist/
+frontend/node_modules/
+
+# Banco de dados local (dados de desenvolvimento)
+backend/controlegastos.db
+backend/controlegastos.db-*
+
+# IDE / SO
+.vs/
+*.user
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env
+.env
+.env.local
